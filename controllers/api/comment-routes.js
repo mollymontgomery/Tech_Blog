@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comment } = rquire('../../models');
+const { Comment } = require('../../models');
 
 router.get('/', (req, res) => {
     Comment.findAll({})
