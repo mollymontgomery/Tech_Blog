@@ -7,48 +7,68 @@
 
 * {
     box-sizing: border-box;
-  }
-  
-  body, html {
+}
+
+
+body, html {
     height: 100%;
     padding: 0;
     margin: 0;
     font-family: sans-serif;
-    color: #333;
+    color: var(--secondary);
   }
 
-  header {
-      background-color: var(--secondary);
-  }
+header {
+    background-color: var(--secondary);
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
 
-  a {
-      text-decoration: none;
-      color: var(--primary);
-      font-weight: bold;
-      transition: color .1s;
-      padding: 10px;
-  }
+nav {
+    background-color: var(--secondary);
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
 
-  a:hover {
-      color: var(--tertiary)
-  }
+wrapper {
+    color: var(--primary);
+    text-decoration: none;
+    justify-content: left;
+}
 
-  button {
-      background-color: var(--primary);
-      border: 0;
-      padding: 1%;
-      color: white;
-      font-weight: bold;
-      transition: background-color .1s;
-      cursor: pointer;
-      border: 5px;
-  }
+a {
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+    transition: color .1s;
+    padding: 10px;
+}
 
-  button:hover {
-      background-color: var(--secondary);
-  }
+a:hover {
+    color: var(--tertiary)
+}
 
-  .post-list {
+
+button {
+    background-color: var(--primary);
+    border: 0;
+    padding: 1%;
+    color: white;
+    font-weight: bold;
+    transition: background-color .1s;
+    cursor: pointer;
+    border: 5px;
+}
+
+button:hover {
+    background-color: var(--secondary);
+}
+
+.post-list {
       margin: 0;
       padding: 0;
   }
@@ -73,48 +93,47 @@
       margin-bottom: 2%;
   }
 
-  form label {
-      display: block;
-  }
+form label {
+    display: flex;
+}
 
-  header {
-      border-bottom: 1px solid var(--primary);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0 1%;
-  }
+header {
+    border-bottom: 1px solid var(--primary);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1%;
+}
 
-  main {
-      height: 100vh;
-      background-color:var(--primary);
-      flex: 1;
-      padding: 2% 4%;
-  }
+main {
+    height: 100vh;
+    background-color:var(--primary);
+    flex: 1;
+    padding: 2% 4%;
+}
 
-  .btn-no-style {
-      background: none;
-      border: none;
-      padding: 0;
-      cursor: pointer;
-      text-decoration: none;
-      color: var(--tertiary);
-      font-size: 100%;
-      font-weight: bold;
-      transition: color .1s;
-  }
+.btn-no-style {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: none;
+    color: var(--tertiary);
+    font-size: 100%;
+    font-weight: bold;
+    transition: color .1s;
+}
 
   .btn-no-style:hover {
       background: none;
       color: var(--primary);
   }
 
-  .title {
-      padding: 5px;
-      background-color: #a2a79e;
+.title {
+    padding: 2px;
+      background-color: var(--secondary);
       color: var(--tertiary);
-      display: flex;
-      justify-content: space-between;
+      display: block;
+      justify-content: center;
       align-items: center;
   }
 
@@ -122,7 +141,7 @@
   li {
       list-style: none;
       margin: 10px;
-      border: 1px solid #a2a79e;
+      border: 1px solid var(--secondary);
   }
 
   p {
@@ -134,15 +153,20 @@
       color: white;
   }
 
+.h1, h1 {
+    color: var(--tertiary);
+    font-size: 36px;
+}
+
   h2 {
       color: var(--tertiary);
   }
 
   #post-title {
-      width: 600px;
+      width: 400px;
   }
   
   #post-content {
-      width: 600px;
-      height: 150px;
+      width: 400px;
+      height: 10px;
   }
