@@ -1,0 +1,148 @@
+:root {
+    --primary: #c7ecd2;
+    --secondary: #333316;
+    --tertiary: #b1bbb9;
+
+}
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    color: #333;
+  }
+
+  header {
+      background-color: var(--secondary);
+  }
+
+  a {
+      text-decoration: none;
+      color: var(--primary);
+      font-weight: bold;
+      transition: color .1s;
+      padding: 10px;
+  }
+
+  a:hover {
+      color: var(--tertiary)
+  }
+
+  button {
+      background-color: var(--primary);
+      border: 0;
+      padding: 1%;
+      color: white;
+      font-weight: bold;
+      transition: background-color .1s;
+      cursor: pointer;
+      border: 5px;
+  }
+
+  button:hover {
+      background-color: var(--secondary);
+  }
+
+  .post-list {
+      margin: 0;
+      padding: 0;
+  }
+
+  textarea, input {
+      padding: .5%;
+      border-radius: 5px;
+      border: 1px solid var(--secondary);
+  }
+
+  textarea:focus, input:focus {
+      outline: none;
+      border: 1px solid var(--primary);
+  }
+
+  textarea {
+      min-width: 40%;
+      min-height: 100px;
+  }
+
+  form > div {
+      margin-bottom: 2%;
+  }
+
+  form label {
+      display: block;
+  }
+
+  header {
+      border-bottom: 1px solid var(--primary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1%;
+  }
+
+  main {
+      height: 100vh;
+      background-color:var(--primary);
+      flex: 1;
+      padding: 2% 4%;
+  }
+
+  .btn-no-style {
+      background: none;
+      border: none;
+      padding: 0;
+      cursor: pointer;
+      text-decoration: none;
+      color: var(--tertiary);
+      font-size: 100%;
+      font-weight: bold;
+      transition: color .1s;
+  }
+
+  .btn-no-style:hover {
+      background: none;
+      color: var(--primary);
+  }
+
+  .title {
+      padding: 5px;
+      background-color: #a2a79e;
+      color: var(--tertiary);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+
+
+  li {
+      list-style: none;
+      margin: 10px;
+      border: 1px solid #a2a79e;
+  }
+
+  p {
+      padding: 0 10px;
+      color: white;
+  }
+
+  label {
+      color: white;
+  }
+
+  h2 {
+      color: var(--tertiary);
+  }
+
+  #post-title {
+      width: 600px;
+  }
+  
+  #post-content {
+      width: 600px;
+      height: 150px;
+  }
