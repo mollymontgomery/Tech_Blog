@@ -7,8 +7,8 @@ router.get('/', (req, res) => {
         order: [['created_at', 'DESC']],
         attributes: [
             'id',
-            'post_url',
             'title',
+            "content",
             'created_at',
         ],
         include: [
@@ -38,7 +38,7 @@ router.get('/:id', (req, res) => {
         where: {
             id: req.params.id
         },
-        attributes: ['id', 'post_url', 'title', 'created_at'],
+        attributes: ['id', 'title', "content", 'created_at'],
         include: [
             {
                 model: Comment,
@@ -68,11 +68,11 @@ router.get('/:id', (req, res) => {
 });
 
 router.post('/', withAuth, (req, res) => {
-    console.log("FRONT END BIZZ", req.body.title, req.body.post_url)
+    console.log("FRONT END BIZZ", req.body.title, req.body.content)
     console.log("USERR bizz", req.session.user_id)
     Post.create({
         title: req.body.title,
-        post_url: req.body.post_url,
+        content: req.body.content,
         user_id: req.session.user_id
     })
         .then(dbPostData => res.json(dbPostData))
